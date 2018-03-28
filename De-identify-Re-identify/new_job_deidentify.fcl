@@ -1,0 +1,17 @@
+# Generated with IRI Workbench - New Protection Job
+# 
+# Author: iridemo
+# Created: 2018-03-23 07:33:25
+# 
+
+
+/INFILE="SCOTT.JOBS;DSN=Oracle;"
+	/PROCESS=ODBC
+	/ALIAS=SCOTT_JOBS
+	/SPECIFICATION=metadata/SCOTT_JOBS.ddf
+
+/REPORT
+
+/OUTFILE="SCOTT.JOBS;DSN=Oracle;"
+	/PROCESS=ODBC
+	/SPECIFICATION=metadata/SCOTT_JOBS.ddf

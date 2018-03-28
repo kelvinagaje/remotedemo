@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="HashingRule_toDatabase_2018-03-12 11:35:02">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#HashingRule_toDatabase"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="HashingRule_toDatabase_2018-03-12 11:49:20">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#HashingRule_toDatabase"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="MaskingRule_2018-03-12 11:49:33" rule="MaskingRule">
+      <matcherDetails details="STATE_PROVINCE"/>
+    </matchers>
+    <matchers name="MaskingRule_2018-03-12 11:50:46">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#MaskingRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="HashingRule_toDatabase_2018-03-12 11:50:55">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#HashingRule_toDatabase"/>
+      <matcherDetails details="STATE_PROVINCE"/>
+    </matchers>
+    <matchers name="EncryptionRule_2018-03-12 11:54:21">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#EncryptionRule"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="EncryptionRule_2018-03-12 11:56:05">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#EncryptionRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRule3_2018-03-12 12:10:30">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#EncryptionRule3"/>
+      <matcherDetails details="ENC_TDES_STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRuleS_2018-03-12 12:11:58">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#EncryptionRuleS"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="EncryptionRule34_2018-03-12 12:14:20">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#EncryptionRule34"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="HashingRule_toDatabase_2018-03-12 12:16:08">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#HashingRule_toDatabase"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="HashingRule_toDatabase_2018-03-12 12:16:24">
+      <rule href="../Encrypt to Database/iriLibrary.fieldrules#HashingRule_toDatabase"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRule37_2018-03-13 03:43:09">
+      <rule href="#EncryptionRule37"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+  </catalogs>
+  <rules name="HashingRule_toDatabase" editor="hashFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="hash_sha2(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="HASH_${FIELDNAME}"/>
+  </rules>
+  <rules name="MaskingRule" editor="charReplWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="replace_chars(${FIELDNAME}, &quot;*&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="MASK_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_3des_ssl(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_TDES_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule3" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_fp_aes256_alphanum(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_FP_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRuleS" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_aes256(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_AES256_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule34" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_aes128(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_AES128_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule37" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_aes256(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_AES256_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

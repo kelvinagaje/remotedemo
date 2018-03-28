@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="EncodingRule_2018-03-19 08:02:08">
+      <rule href="#EncodingRule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="EncodingRule_2018-03-19 08:02:25">
+      <rule href="#EncodingRule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="EncodingRule_2018-03-19 08:03:03">
+      <rule href="#EncodingRule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:04:41">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:06:11">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:06:23">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:07:21">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:08:26">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:09:52">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="Decode Rule_2018-03-20 06:11:37">
+      <rule href="#Decode Rule"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:13:51">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:14:34">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:15:16">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:15:36">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:15:44">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:16:21">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+    <matchers name="DecodeRule2_2018-03-20 06:42:48">
+      <rule href="#DecodeRule2"/>
+      <matcherDetails details="ENAME"/>
+    </matchers>
+  </catalogs>
+  <rules name="EncodingRule" editor="encodeFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="encode_base64(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_B64_${FIELDNAME}"/>
+  </rules>
+  <rules name="Decode Rule" editor="encodeFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="decode_base64(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="DEC_B64_${FIELDNAME}"/>
+  </rules>
+  <rules name="DecodeRule2" editor="encodeFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="decode_base64(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="DEC_B64_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

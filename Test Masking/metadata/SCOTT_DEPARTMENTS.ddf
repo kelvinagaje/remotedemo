@@ -1,0 +1,16 @@
+# Generated with IRI Workbench - Discover Metadata
+# 
+ # Author: iridemo
+ # Created: 2018-03-07 07:50:13
+ # 
+ # This is just a sameple test of maskin in 
+ # 
+ # /FILE=""SCOTT.DEPARTMENTS;DSN=Oracle;""
+ # /PROCESS=ODBC
+ # 
+
+/FIELD=(DEPARTMENT_ID, TYPE=NUMERIC, POSITION=1, SEP="\t", FRAME="")
+/FIELD=(DEPARTMENT_NAME, TYPE=ASCII, POSITION=2, SEP="\t", FRAME="")
+/FIELD=(MANAGER_SID, TYPE=ASCII, POSITION=3, SEP="\t", FRAME="")
+/FIELD=(LOCATION_ID, TYPE=NUMERIC, POSITION=4, SEP="\t", FRAME="")
+

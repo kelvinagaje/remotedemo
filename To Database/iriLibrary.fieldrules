@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="HashingRule_2018-03-12 11:12:13" rule="HashingRule">
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="EncryptionRule_2018-03-12 11:14:35" rule="EncryptionRule">
+      <matcherDetails details="FIRST_NAME"/>
+    </matchers>
+    <matchers name="EncryptionRule2_2018-03-12 11:17:16" rule="EncryptionRule2">
+      <matcherDetails details="EMPLOYEE_SID"/>
+    </matchers>
+  </catalogs>
+  <rules name="HashingRule" editor="hashFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="hash_sha1(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="HASH_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_3des_ebc(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_TDES_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule2" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="dec_fp_aes256_alphanum(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="DEC_FP_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>

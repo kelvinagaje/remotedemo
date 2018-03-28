@@ -1,0 +1,13 @@
+# Generated with IRI Workbench - Discover Metadata
+# 
+ # Author: iridemo
+ # Created: 2018-03-26 09:14:13
+ # 
+ # /FILE=""SCOTT.COUNTRIES;DSN=Oracle;""
+ # /PROCESS=ODBC
+ # 
+
+/FIELD=(COUNTRY_ID, TYPE=ASCII, POSITION=1, SEP="\t", FRAME="")
+/FIELD=(COUNTRY_NAME, TYPE=ASCII, POSITION=2, SEP="\t", FRAME="")
+/FIELD=(REGION_ID, TYPE=NUMERIC, POSITION=3, SEP="\t", FRAME="")
+

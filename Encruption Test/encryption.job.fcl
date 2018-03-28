@@ -1,0 +1,17 @@
+# Generated with IRI Workbench - New Protection Job
+# 
+# Author: iridemo
+# Created: 2018-03-09 07:58:41
+# 
+
+
+/INFILE="SCOTT.PROJECT_DIM;DSN=Oracle;"
+	/PROCESS=ODBC
+	/ALIAS=SCOTT_PROJECT_DIM
+	/SPECIFICATION=metadata/SCOTT_PROJECT_DIM.ddf
+
+/REPORT
+
+/OUTFILE=project_dim_encry
+	/PROCESS=RECORD
+	/SPECIFICATION=metadata/SCOTT_PROJECT_DIM.ddf

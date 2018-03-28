@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="dec_aes256_ssl(${FIELDNAME}, &quot;admin123$&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="DEC_AES256_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

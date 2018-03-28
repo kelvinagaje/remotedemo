@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="Location_Encrypt_Test_2018-03-12 05:01:49">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#Location_Encrypt_Test"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="street_add_enc_2018-03-12 05:02:50">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#street_add_enc"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="street_add_enc_2018-03-12 05:07:49">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#street_add_enc"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="MaskingRule_2018-03-12 05:11:48" rule="MaskingRule">
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="MaskingRule_2018-03-12 05:15:03">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#MaskingRule"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="MaskingRule_2018-03-12 05:59:23">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#MaskingRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="HashingRule_2018-03-12 06:33:31">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#HashingRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="HashingRule_2018-03-12 07:27:30">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#HashingRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="RandomRule_2018-03-12 07:51:09" rule="RandomRule">
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="EncryptionRule_2018-03-12 07:52:13">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#EncryptionRule"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="Location_Encrypt_Test_2018-03-12 07:53:19">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#Location_Encrypt_Test"/>
+      <matcherDetails details="LOCATION_ID"/>
+    </matchers>
+    <matchers name="RandomRule_2018-03-12 07:54:33">
+      <rule href="../Encrypt To Table Test/iriLibrary.fieldrules#RandomRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+  </catalogs>
+  <rules name="Location_Encrypt_Test" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_3des_ebc(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_TDES_${FIELDNAME}"/>
+  </rules>
+  <rules name="street_add_enc" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_fp_aes256_alphanum(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_FP_${FIELDNAME}"/>
+  </rules>
+  <rules name="MaskingRule" editor="charReplWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="replace_chars(${FIELDNAME}, &quot;*&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="MASK_${FIELDNAME}"/>
+  </rules>
+  <rules name="HashingRule" editor="hashFunctionWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="hash_sha1(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="HASH_${FIELDNAME}"/>
+  </rules>
+  <rules name="RandomRule" editor="randomWizard">
+    <properties fieldRulePropertyType="NAME" value="RAND_${FIELDNAME}"/>
+    <properties fieldRulePropertyType="RANDOM" value="true"/>
+    <properties fieldRulePropertyType="DATATYPE" value="ASCII"/>
+  </rules>
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_3des_ssl(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_TDES_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

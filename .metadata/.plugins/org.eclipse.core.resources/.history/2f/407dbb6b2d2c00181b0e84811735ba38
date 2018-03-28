@@ -1,0 +1,18 @@
+# Generated with IRI Workbench - New Protection Job
+# 
+# Author: iridemo
+# Created: 2018-03-20 06:54:45
+# 
+
+
+/INFILE="SCOTT.EMP;DSN=Oracle;"
+	/PROCESS=ODBC
+	/ALIAS=SCOTT_EMP
+	/SPECIFICATION=metadata/SCOTT_EMP.ddf
+
+/REPORT
+
+/OUTFILE="SCOTT.EMP_HASHED;DSN=Oracle;"
+	/PROCESS=ODBC
+	/CREATE
+	/SPECIFICATION=metadata/SCOTT_EMP.ddf

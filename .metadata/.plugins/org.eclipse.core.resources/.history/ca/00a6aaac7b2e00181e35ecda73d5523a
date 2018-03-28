@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_acu_MC5yEeiWitFVcC7K0A" version="11.1.6.201706261600">
+  <semanticResources>metadata/SCOTT_JOBS_DR.ddf</semanticResources>
+  <semanticResources>metadata/SCOTT_JOBS.ddf</semanticResources>
+  <semanticResources>iriLibrary.fieldrules</semanticResources>
+  <semanticResources>new_job_identify.fcl</semanticResources>
+</viewpoint:DAnalysis>

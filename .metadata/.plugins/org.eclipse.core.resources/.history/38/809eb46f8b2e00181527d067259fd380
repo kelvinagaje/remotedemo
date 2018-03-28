@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="De-identifyRule_2018-03-23 05:17:55" rule="De-identifyRule">
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:22:14">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:22:28">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:23:33">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:36:51">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:37:34">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule2_2018-03-23 05:39:58" rule="De-identifyRule2">
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule2_2018-03-23 05:45:23">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule2"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule2_2018-03-23 05:48:07">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule2"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:50:57">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="MIN_SALARY"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 05:58:25">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 06:07:46">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule2_2018-03-23 06:08:56">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule2"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 06:59:54">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 07:00:33">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule2_2018-03-23 07:00:53">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule2"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="EncryptionRule_2018-03-23 07:02:42">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#EncryptionRule"/>
+      <matcherDetails details="MIN_SALARY"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 07:04:38">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 07:08:08">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule_2018-03-23 07:09:32">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule"/>
+      <matcherDetails details="JOB_ID"/>
+    </matchers>
+    <matchers name="De-identifyRule3_2018-03-23 07:14:54">
+      <rule href="../De-Identify and Re-Identify/iriLibrary.fieldrules#De-identifyRule3"/>
+      <matcherDetails details="JOB_TITLE"/>
+    </matchers>
+  </catalogs>
+  <rules name="De-identifyRule" editor="idWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="de_identify(${FIELDNAME}, &quot;secret&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="IDENT_${FIELDNAME}"/>
+  </rules>
+  <rules name="De-identifyRule2" editor="idWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="de_identify(${FIELDNAME}, &quot;secret&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="IDENT_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_aes128(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_AES128_${FIELDNAME}"/>
+  </rules>
+  <rules name="De-identifyRule3" editor="idWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="de_identify(${FIELDNAME}, &quot;secret&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="IDENT_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

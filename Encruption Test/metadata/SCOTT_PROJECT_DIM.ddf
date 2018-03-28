@@ -1,0 +1,12 @@
+# Generated with IRI Workbench - Discover Metadata
+# 
+ # Author: iridemo
+ # Created: 2018-03-09 07:58:12
+ # 
+ # /FILE=""SCOTT.PROJECT_DIM;DSN=Oracle;""
+ # /PROCESS=ODBC
+ # 
+
+/FIELD=(PROJECT_ID, TYPE=NUMERIC, POS=1, SEPARATOR=",", FRAME="\"\"")
+/FIELD=(PROJECT_NAME, TYPE=ASCII, POS=2, SEPARATOR=",", FRAME="\"\"")
+

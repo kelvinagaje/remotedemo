@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flow:FlowBatch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddf="http://www.iri.com/lang/ddf/Ddf" xmlns:flow="http://flow/1.0" xmlns:scl="http://www.iri.com/lang/Scl" name="new_batch">
+  <flowlets name="new_batch">
+    <blocks xsi:type="flow:StartBlock" name="Start" outputConnections="Start_To_SCOTT_DEPT.scl"/>
+    <blocks xsi:type="flow:TransformMappingBlock" name="SCOTT_DEPT.scl" iriJob="SCOTT_DEPT.scl">
+      <inputDatas name="In_SCOTT_DEPT" inputConnections="Start_To_SCOTT_DEPT.scl">
+        <dataInfo xsi:type="flow:DBDataInfo" name="SCOTT.DEPT" DSN="Oracle" DTPName="Oracle" providerName="Oracle" database="Oracle" hostName="localhost" instanceName="XE" userName="scott" password="tiger" schema="SCOTT" table="DEPT" delimiter="&#x9;">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DEPTNO"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Precision"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DEPTNO"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DNAME"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DNAME"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="LOC"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="LOC"/>
+          </fields>
+          <constraints xsi:type="flow:PrimaryKey" name="PK_DEPT" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0"/>
+          <indexes name="PK_DEPT" isUnique="true" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0"/>
+        </dataInfo>
+        <sectionOptions xsi:type="scl:Alias" alias="SCOTT_DEPT"/>
+        <sectionOptions xsi:type="ddf:Process" name="ODBC"/>
+      </inputDatas>
+      <outputDatas name="Out_SCOTT_DEPT.out">
+        <dataInfo xsi:type="flow:FileDataInfo" name="SCOTT_DEPT.out" fileName="SCOTT_DEPT.out">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DEPTNO"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Precision"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DEPTNO"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DNAME"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DNAME"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="LOC"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="LOC"/>
+          </fields>
+        </dataInfo>
+        <sectionOptions xsi:type="ddf:Process" name="RECORD"/>
+      </outputDatas>
+      <mappings name="DEPTNO_To_DEPTNO" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.0"/>
+      <mappings name="DNAME_To_DNAME" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.1" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.1"/>
+      <mappings name="LOC_To_LOC" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.2" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.2"/>
+      <mappings name="DEPTNO_To_DEPTNO" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.0" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0"/>
+      <mappings name="DNAME_To_DNAME" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.1" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.1"/>
+      <mappings name="LOC_To_LOC" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.2" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.2"/>
+      <transformData xsi:type="flow:ReportAction" name="Report_SCOTT_DEPT">
+        <dataInfo xsi:type="flow:InternalDataInfo" name="Report">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DEPTNO"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Precision"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DEPTNO"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="DNAME"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="DNAME"/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="LOC"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:LocationDef" defType="ODEF" string="LOC"/>
+          </fields>
+        </dataInfo>
+      </transformData>
+    </blocks>
+    <connections name="Start_To_SCOTT_DEPT.scl" startBlock="//@flowlets.0/@blocks.0" endBlock="//@flowlets.0/@blocks.1/@inputDatas.0"/>
+  </flowlets>
+  <Lineage>
+    <sourceTargetData extractor="ODBC" sourceDSN="Oracle" sourceDTPName="Oracle" separator="&#x9;">
+      <tables>SCOTT.DEPT</tables>
+    </sourceTargetData>
+  </Lineage>
+</flow:FlowBatch>
+

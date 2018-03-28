@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="Psuedo_test_rule_2018-03-09 08:47:14">
+      <rule href="#Psuedo_test_rule"/>
+      <matcherDetails details="FIRST_NAME"/>
+    </matchers>
+  </catalogs>
+  <rules name="Psuedo_test_rule" editor="pseudoWizard">
+    <properties fieldRulePropertyType="NAME" value="PSEUDO_${FIELDNAME}"/>
+    <properties fieldRulePropertyType="SET" value="C:\IRI\CoSort95\sets\names\names_male_first.set"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

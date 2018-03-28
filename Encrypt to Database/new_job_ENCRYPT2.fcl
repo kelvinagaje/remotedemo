@@ -1,0 +1,17 @@
+# Generated with IRI Workbench - New Protection Job
+# 
+# Author: iridemo
+# Created: 2018-03-12 12:14:33
+# 
+
+
+/INFILE="SCOTT.LOCATIONS_ENC;DSN=Oracle;"
+	/PROCESS=ODBC
+	/ALIAS=SCOTT_LOCATIONS_ENC
+	/SPECIFICATION=metadata/SCOTT_LOCATIONS_ENC.ddf
+
+/REPORT
+
+/OUTFILE="SCOTT.LOCATIONS_ENC;DSN=Oracle;"
+	/PROCESS=ODBC
+	/SPECIFICATION=metadata/SCOTT_LOCATIONS.ddf

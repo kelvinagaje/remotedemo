@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="project_dim_test_mask_masking_test_2018-03-09 08:42:32" rule="project_dim_test_mask_masking_test">
+      <matcherDetails details="PROJECT_NAME"/>
+    </matchers>
+  </catalogs>
+  <rules name="project_dim_test_mask_masking_test" editor="charReplWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="replace_chars(${FIELDNAME}, &quot;*&quot;)"/>
+    <properties fieldRulePropertyType="NAME" value="MASK_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

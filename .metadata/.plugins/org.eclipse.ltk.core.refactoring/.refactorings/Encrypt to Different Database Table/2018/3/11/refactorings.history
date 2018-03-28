@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Encrypt to Different Database Table/new_job.fcl&apos; to &apos;new_job_Encrypt.fcl&apos;" description="Rename resource &apos;new_job.fcl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="new_job.fcl" name="new_job_Encrypt.fcl" stamp="1521017254619" updateReferences="true"/>
+</session>

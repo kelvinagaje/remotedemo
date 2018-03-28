@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.iri.pelican.launch.PelicanLaunchConfigurationType">
+<stringAttribute key="com.iri.pelican.launch.COSORT_EXEC" value="C:\IRI\CoSort95\bin\sortcl"/>
+<booleanAttribute key="com.iri.pelican.launch.IS REMOTE" value="false"/>
+<listAttribute key="com.iri.pelican.launch.MAIN_TYPE_LIST">
+<listEntry value="new_job_encode.fcl"/>
+</listAttribute>
+<stringAttribute key="com.iri.pelican.launch.PROGRAM_ARGUMENTS" value=""/>
+<stringAttribute key="com.iri.pelican.launch.PROJECT_ATTR" value="Encode-Decode"/>
+<stringAttribute key="com.iri.pelican.launch.REMOTE_CONNECTION" value=""/>
+<stringAttribute key="com.iri.pelican.launch.REMOTE_HOST" value="local"/>
+<stringAttribute key="com.iri.pelican.launch.REMOTE_WD" value=""/>
+<stringAttribute key="com.iri.pelican.launch.WORKING_DIRECTORY" value="${workspace_loc:Encode-Decode\}"/>
+<booleanAttribute key="org.eclipse.debug.core.ATTR_REFRESH_RECURSIVE" value="true"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${project}"/>
+</launchConfiguration>

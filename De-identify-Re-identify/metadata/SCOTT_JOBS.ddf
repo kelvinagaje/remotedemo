@@ -1,0 +1,12 @@
+# Generated with IRI Workbench - Discover Metadata
+# 
+ # Author: iridemo
+ # Created: 2018-03-23 07:32:12
+ # 
+ # /FILE=""SCOTT.JOBS;DSN=Oracle;""
+ # /PROCESS=ODBC
+ # 
+
+/FIELD=(JOB_ID, TYPE=ASCII, POSITION=1, SEP="\t", FRAME="")
+/FIELD=(JOB_TITLE, TYPE=ASCII, POSITION=2, SEP="\t", FRAME="")
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_4E1qsCdaEeiOk_6cZ_tbYg" version="11.1.6.201706261600">
+  <semanticResources>metadata/SCOTT_EMPLOYEES.ddf</semanticResources>
+  <semanticResources>iriLibrary.fieldrules</semanticResources>
+  <semanticResources>platform:/resource/Encrypt to Different Database Table/iriLibrary.fieldrules</semanticResources>
+  <semanticResources>metadata/SCOTT_EMPLOYEES_TEST.ddf</semanticResources>
+  <semanticResources>new_job_Encrypt.fcl</semanticResources>
+  <semanticResources>SCOTT_EMPLOYEES_TEST.ddf</semanticResources>
+  <semanticResources>new_job_decrypt.fcl</semanticResources>
+</viewpoint:DAnalysis>

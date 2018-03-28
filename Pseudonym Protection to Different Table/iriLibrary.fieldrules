@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="PseudonymRule_2018-03-14 08:13:49">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule_2018-03-14 08:15:19">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule_2018-03-14 08:18:06">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule_2018-03-14 08:19:03">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule 1_2018-03-14 08:21:58">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule 1"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule_2018-03-14 08:43:11">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+    <matchers name="PseudonymRule 1_2018-03-14 08:54:17">
+      <rule href="../Pseudonym Protection to Different Table/iriLibrary.fieldrules#PseudonymRule 1"/>
+      <matcherDetails details="LAST_NAME"/>
+    </matchers>
+  </catalogs>
+  <rules name="PseudonymRule" editor="pseudoWizard">
+    <properties fieldRulePropertyType="NAME" value="PSEUDO_${FIELDNAME}"/>
+    <properties fieldRulePropertyType="SET" value="C:\IRI\CoSort95\sets\names\names_last.set"/>
+  </rules>
+  <rules name="PseudonymRule 1" editor="pseudoWizard">
+    <properties fieldRulePropertyType="NAME" value="PSEUDO_${FIELDNAME}"/>
+    <properties fieldRulePropertyType="SET" value="C:\IRI\CoSort95\sets\names\names_male_first.set"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+

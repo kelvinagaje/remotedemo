@@ -1,0 +1,16 @@
+# Generated with IRI Workbench - Discover Metadata
+# 
+ # Author: iridemo
+ # Created: 2018-03-12 11:33:41
+ # 
+ # /FILE=""SCOTT.LOCATIONS;DSN=Oracle;""
+ # /PROCESS=ODBC
+ # 
+
+/FIELD=(LOCATION_ID, TYPE=NUMERIC, POS=1, SEP="\t", FRAME="")
+/FIELD=(STREET_ADDRESS, TYPE=ASCII, POS=2, SEP="\t", FRAME="")
+/FIELD=(POSTAL_CODE, TYPE=ASCII, POS=3, SEP="\t", FRAME="")
+/FIELD=(CITY, TYPE=ASCII, POS=4, SEP="\t", FRAME="")
+/FIELD=(STATE_PROVINCE, TYPE=ASCII, POS=5, SEP="\t", FRAME="")
+/FIELD=(COUNTRY_ID, TYPE=ASCII, POS=6, SEP="\t", FRAME="")
+

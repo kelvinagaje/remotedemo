@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flow:FlowBatch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddf="http://www.iri.com/lang/ddf/Ddf" xmlns:flow="http://flow/1.0" xmlns:scl="http://www.iri.com/lang/Scl" name="new_job.bat">
+  <flowlets name="new_job">
+    <blocks xsi:type="flow:StartBlock" name="Start" outputConnections="Start_To_In_SCOTT.LOCATIONS"/>
+    <blocks xsi:type="flow:TransformMappingBlock" name="new_job.fcl" iriJob="new_job.fcl">
+      <inputDatas name="In_SCOTT.LOCATIONS" inputConnections="Start_To_In_SCOTT.LOCATIONS">
+        <dataInfo xsi:type="flow:DBDataInfo" name="SCOTT.LOCATIONS" DSN="Oracle" DTPName="Oracle" providerName="Oracle" database="Oracle" hostName="localhost" instanceName="XE" userName="scott" password="tiger" schema="SCOTT" table="LOCATIONS" delimiter="&#x9;">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="LOCATION_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="STREET_ADDRESS"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="POSTAL_CODE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="CITY"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="4"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="STATE_PROVINCE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="5"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="COUNTRY_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="6"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <constraints xsi:type="flow:PrimaryKey" name="LOC_ID_PK" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0"/>
+          <constraints xsi:type="flow:ForeignKey" name="LOC_C_ID_FK" field="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5" refTableName="COUNTRIES">
+            <refFieldNames>COUNTRY_ID</refFieldNames>
+          </constraints>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.4"/>
+        </dataInfo>
+        <sectionOptions xsi:type="ddf:Process" name="ODBC"/>
+        <sectionOptions xsi:type="scl:Alias" alias="SCOTT_LOCATIONS"/>
+      </inputDatas>
+      <outputDatas name="Out_SCOTT.LOCATIONS">
+        <dataInfo xsi:type="flow:DBDataInfo" name="SCOTT.LOCATIONS" DSN="Oracle" DTPName="Oracle" providerName="Oracle" database="Oracle" hostName="localhost" instanceName="XE" userName="scott" password="tiger" schema="SCOTT" table="LOCATIONS" delimiter="&#x9;">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="LOCATION_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="STREET_ADDRESS"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="POSTAL_CODE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="CITY"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="4"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="STATE_PROVINCE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="5"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="COUNTRY_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="6"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <constraints xsi:type="flow:PrimaryKey" name="LOC_ID_PK" fields="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0"/>
+          <constraints xsi:type="flow:ForeignKey" name="LOC_C_ID_FK" field="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5" refTableName="COUNTRIES">
+            <refFieldNames>COUNTRY_ID</refFieldNames>
+          </constraints>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.4"/>
+          <indexes name="LOC_STATE_PROVINCE_IX" fields="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.3 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5 //@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.4"/>
+        </dataInfo>
+        <sectionOptions xsi:type="ddf:Process" name="ODBC"/>
+      </outputDatas>
+      <mappings name="LOCATION_ID_To_SCOTT_LOCATIONS.LOCATION_ID" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.0" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.0"/>
+      <mappings name="STREET_ADDRESS_To_SCOTT_LOCATIONS.STREET_ADDRESS" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.1" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.1"/>
+      <mappings name="POSTAL_CODE_To_SCOTT_LOCATIONS.POSTAL_CODE" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.2" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.2"/>
+      <mappings name="CITY_To_SCOTT_LOCATIONS.CITY" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.3" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.3"/>
+      <mappings name="STATE_PROVINCE_To_SCOTT_LOCATIONS.STATE_PROVINCE" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.4" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.4"/>
+      <mappings name="COUNTRY_ID_To_SCOTT_LOCATIONS.COUNTRY_ID" sourceField="//@flowlets.0/@blocks.1/@inputDatas.0/@dataInfo/@fields.5" targetField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.5"/>
+      <mappings name="SCOTT_LOCATIONS.LOCATION_ID_To_LOCATION_ID" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.0" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.0"/>
+      <mappings name="SCOTT_LOCATIONS.STREET_ADDRESS_To_STREET_ADDRESS" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.1" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.1"/>
+      <mappings name="SCOTT_LOCATIONS.POSTAL_CODE_To_POSTAL_CODE" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.2" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.2"/>
+      <mappings name="SCOTT_LOCATIONS.CITY_To_CITY" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.3" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.3"/>
+      <mappings name="SCOTT_LOCATIONS.STATE_PROVINCE_To_STATE_PROVINCE" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.4" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.4"/>
+      <mappings name="SCOTT_LOCATIONS.COUNTRY_ID_To_COUNTRY_ID" sourceField="//@flowlets.0/@blocks.1/@transformData/@dataInfo/@fields.5" targetField="//@flowlets.0/@blocks.1/@outputDatas.0/@dataInfo/@fields.5"/>
+      <comments>
+        <comments>Generated with IRI Workbench - New Protection Job&#xD;
+</comments>
+        <comments>&#xD;
+</comments>
+        <comments>Author: iridemo&#xD;
+</comments>
+        <comments>Created: 2018-03-07 08:55:55&#xD;
+</comments>
+        <comments>&#xD;
+</comments>
+      </comments>
+      <transformData xsi:type="flow:ReportAction" name="Report">
+        <dataInfo xsi:type="flow:InternalDataInfo" name="Report">
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.LOCATION_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="NUMERIC"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="1"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.STREET_ADDRESS"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="2"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.POSTAL_CODE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="3"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.CITY"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="4"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.STATE_PROVINCE"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="5"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+          <fields xsi:type="scl:AdvancedField">
+            <fieldMathStatement>
+              <compoundExpression>
+                <relationalExpression>
+                  <lValue>
+                    <lValue>
+                      <lValue>
+                        <expr xsi:type="scl:Unary">
+                          <value xsi:type="ddf:FieldName" name="SCOTT_LOCATIONS.COUNTRY_ID"/>
+                        </expr>
+                      </lValue>
+                    </lValue>
+                  </lValue>
+                </relationalExpression>
+              </compoundExpression>
+            </fieldMathStatement>
+            <fieldAttributes xsi:type="ddf:DataType" name="ASCII"/>
+            <fieldAttributes xsi:type="ddf:Position" number1="6"/>
+            <fieldAttributes xsi:type="ddf:Separator" sepValue="&#x9;"/>
+            <fieldAttributes xsi:type="ddf:Frame" frameValue=""/>
+          </fields>
+        </dataInfo>
+      </transformData>
+    </blocks>
+    <connections name="Start_To_In_SCOTT.LOCATIONS" startBlock="//@flowlets.0/@blocks.0" endBlock="//@flowlets.0/@blocks.1/@inputDatas.0"/>
+  </flowlets>
+</flow:FlowBatch>

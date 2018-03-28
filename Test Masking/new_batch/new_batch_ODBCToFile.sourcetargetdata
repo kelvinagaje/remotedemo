@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.iri.model.sourcetargetdata:SourceTargetData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.iri.model.sourcetargetdata="http://com/iri/model/sourcetargetdata" extractor="ODBC" sourceDSN="Oracle" sourceDTPName="Oracle" separator="&#x9;">
+  <tables>SCOTT.DEPT</tables>
+</com.iri.model.sourcetargetdata:SourceTargetData>
+

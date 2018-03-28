@@ -1,0 +1,18 @@
+# Generated with IRI Workbench - New Protection Job
+# 
+# Author: iridemo
+# Created: 2018-03-26 09:18:20
+# 
+
+
+/INFILE="SCOTT.COUNTRIES;DSN=Oracle;"
+	/PROCESS=ODBC
+	/ALIAS=SCOTT_COUNTRIES
+	/SPECIFICATION=metadata/SCOTT_COUNTRIES.ddf
+
+/REPORT
+
+/OUTFILE="SCOTT.COUNTRIES;DSN=Oracle;"
+	/PROCESS=ODBC
+	/CREATE
+	/SPECIFICATION=metadata/SCOTT_COUNTRIES.ddf

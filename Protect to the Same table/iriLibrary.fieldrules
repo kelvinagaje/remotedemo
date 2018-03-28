@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fieldrules:FieldRuleLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fieldrules="http://fieldrules/1.0">
+  <catalogs name="FieldEditor">
+    <matchers name="EncryptionRule_2018-03-13 03:45:44">
+      <rule href="../Protect to the Same table/iriLibrary.fieldrules#EncryptionRule"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRule1_2018-03-13 03:46:18">
+      <rule href="../Protect to the Same table/iriLibrary.fieldrules#EncryptionRule1"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRule1_2018-03-13 03:48:01">
+      <rule href="../Protect to the Same table/iriLibrary.fieldrules#EncryptionRule1"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+    <matchers name="EncryptionRule1_2018-03-13 03:50:33">
+      <rule href="../Protect to the Same table/iriLibrary.fieldrules#EncryptionRule1"/>
+      <matcherDetails details="STREET_ADDRESS"/>
+    </matchers>
+  </catalogs>
+  <rules name="EncryptionRule" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_aes128(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_AES128_${FIELDNAME}"/>
+  </rules>
+  <rules name="EncryptionRule1" editor="cryptoWizard">
+    <properties fieldRulePropertyType="EXPRESSION" value="enc_fp_aes256_alphanum(${FIELDNAME})"/>
+    <properties fieldRulePropertyType="NAME" value="ENC_FP_${FIELDNAME}"/>
+  </rules>
+</fieldrules:FieldRuleLibrary>
+
